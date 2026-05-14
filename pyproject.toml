@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "1factory-mcp"
+version = "0.1.0"
+description = "MCP server for 1Factory quality management API"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0.0",
+    "starlette>=0.27.0",
+    "uvicorn[standard]>=0.24.0",
+    "httpx>=0.25.0",
+    "pydantic>=2.0.0",
+]
+
+[project.scripts]
+1factory-mcp = "onefactory_mcp.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["onefactory_mcp"]

@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-An [MCP](https://modelcontextprotocol.io/) server for the [1Factory API](https://www.1factory.com/api/v1/1factory-api.json) (v24.31), exposing manufacturing quality management data — part masters, inspection plans, inspections, FAIs, suppliers, and QMS records — as tools for AI agents.
+An unofficial, third-party [MCP](https://modelcontextprotocol.io/) server for the [1Factory API](https://www.1factory.com/api/v1/1factory-api.json) (v24.31), exposing manufacturing quality management data — part masters, inspection plans, inspections, FAIs, suppliers, and QMS records — as tools for AI agents.
 
 ## Tools (19)
 
@@ -63,6 +63,10 @@ Serves MCP over SSE on `http://0.0.0.0:8765/sse`.
 See [`docs/PLAN.md`](docs/PLAN.md) for the architecture overview, per-tool filter sets, and pagination/rate-limit strategy.
 
 The upstream OpenAPI spec spells the inspection-plan `is_tabulated` filter as `is_tablulated` (extra `l`). This server accepts both spellings from callers and forwards under the typo'd name the API actually requires.
+
+## Disclaimer
+
+This is an unofficial, community-maintained project. It is not affiliated with, endorsed by, or sponsored by 1Factory, Inc. "1Factory" is a trademark of 1Factory, Inc., used here only to identify the API this server wraps.
 
 ## License
 
